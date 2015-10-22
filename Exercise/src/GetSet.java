@@ -12,8 +12,14 @@ public class GetSet {
     GetSet(String name){
         this.name=name;
     }
+    GetSet(String name, int id, boolean sex, double score){
+        this.name=name;
+        this.score=score;
+        this.id=id;
+        this.sex=sex;
+    }
 
-    public void setId(int id) {
+    public void setId(int id){
         this.id = id;
     }
     public void setScore(double score) {
