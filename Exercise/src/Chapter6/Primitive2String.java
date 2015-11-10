@@ -20,6 +20,6 @@ public class Primitive2String {
         System.out.println(Boolean.compare(true,false));
         System.out.println(Boolean.compare(true,true));
         System.out.println(Boolean.compare(false,true));
+        System.out.println(Integer.compare(2,3));
     }
-
 }
