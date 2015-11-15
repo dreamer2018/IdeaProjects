@@ -1,7 +1,6 @@
 /**
  * Created by zhoupan on 15-11-10 上午8:14.
  */
-package Chapter6;
 
 import java.util.DoubleSummaryStatistics;
 

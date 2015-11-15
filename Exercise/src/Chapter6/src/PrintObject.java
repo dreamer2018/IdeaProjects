@@ -3,7 +3,6 @@
 /**
  * Created by zhoupan on 15-11-10 下午12:14.
  */
-package Chapter6;
 
 class Person{
     private String name;
