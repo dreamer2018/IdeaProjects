@@ -14,6 +14,19 @@ class Fina{
         c=100;
         str="hello owrld";
     }
+    public final int Max(int a, int b){
+        if(a>b) {
+            return a;
+        }
+        return b;
+    }
+}
+
+class FinaChild extends Fina{
+
+    //不能重写
+    //public int Max(int a,int b){}
+
 }
 public class FinalTest {
     public static void main(String[] args) {
