@@ -34,6 +34,5 @@ public class FinalTest {
         System.out.println(Fina.b);
         Fina fina=new Fina();
         System.out.println(fina.c);
-        System.out.println(fina.str);
     }
 }
