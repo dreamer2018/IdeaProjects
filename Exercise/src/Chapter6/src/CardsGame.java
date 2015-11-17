@@ -43,6 +43,7 @@ public class CardsGame{
 
     public static void main(String[] args) {
         int num;
+        //创建纸牌游戏的对象
         CardsGame cg=new CardsGame();
         for(int i=1;;i++) {
             num = cg.getCardsSum(new Cards());
