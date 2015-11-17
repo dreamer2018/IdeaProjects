@@ -34,10 +34,13 @@ public class CardsGame{
 
     //获取四张牌的和
     public int getCardsSum(Cards c){
+
         int num=0;
+
         for(int i=0;i<4;i++) {
             num+=this.getCard(c.getCards());
         }
+
         return num;
     }
 
