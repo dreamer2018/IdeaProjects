@@ -1,3 +1,5 @@
+package src.Chapter6;
+
 /**
  * Created by zhoupan on 15-11-16 上午9:29.
  */

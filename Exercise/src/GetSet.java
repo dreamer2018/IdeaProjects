@@ -1,6 +1,7 @@
 /**
  * Created by zhoupan on 10/21/15.
  */
+package src;
 public class GetSet {
     private int id;
     private String name;
