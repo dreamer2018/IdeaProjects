@@ -8,7 +8,7 @@ class Cards{
     //创建纸牌
     private int[]  cards=new int[52];
 
-    //对纸牌进行初始化
+    //用初始化块，对纸牌进行初始化
     {
         for(int i=0,j=0;i<52;i++){
             if(i%4==0){
