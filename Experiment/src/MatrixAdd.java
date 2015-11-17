@@ -47,15 +47,15 @@ public class MatrixAdd {
 
     public void printResult(int[][] a, int[][] b, int[][] c){
         for (int i = 0; i <a.length ; i++) {
-            for (int j = 0; j <a[a.length].length ; j++) {
-                System.out.println(a[i][j]+);
+            for (int j = 0; j <a[i].length ; j++) {
+                System.out.println(a[i][j]);
             }
             if(i==1){
                 System.out.println("\t+\t");
             }else {
                 System.out.println("\t\t");
             }
-            for (int j = 0; j <a[a.length].length ; j++) {
+            for (int j = 0; j <a[i].length ; j++) {
                 System.out.println(a[i][j]);
             }
             if(i==1){
@@ -63,7 +63,7 @@ public class MatrixAdd {
             }else {
                 System.out.println("\t\t");
             }
-            for (int j = 0; j <c[c.length].length ; j++) {
+            for (int j = 0; j <c[i].length ; j++) {
                 System.out.println(c[i][j]);
             }
         }
@@ -75,16 +75,16 @@ public class MatrixAdd {
 
         int[][] array1=new int[3][3];
         int[][] array2=new int[3][3];
-        int[][] result=new int[3][3];
+
 
         for(int i=0;i<array1.length;i++){
-            for (int j=0; j<array1[array1.length].length; j++){
+            for (int j=0; j< array1[i].length; j++){
                 array1[i][j]=s.nextInt();
             }
         }
 
         for(int i=0;i<array2.length;i++){
-            for (int j=0; j<array2[array2.length].length; j++){
+            for (int j=0; j< array2[i].length; j++){
                 array2[i][j]=s.nextInt();
             }
         }
@@ -97,7 +97,7 @@ public class MatrixAdd {
         m1.setMatrix(array1);
         m2.setMatrix(array2);
 
-        result=ma.addMatrix(m1.getMatrix(),m2.getMatrix());
+        int[][] result=ma.addMatrix(m1.getMatrix(),m2.getMatrix());
         ma.printResult(m1.getMatrix(),m2.getMatrix(),result);
     }
 }
