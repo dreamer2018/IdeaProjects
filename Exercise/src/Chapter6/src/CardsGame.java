@@ -27,7 +27,9 @@ public class CardsGame{
 
     //获取一张纸牌
     public int getCard(int[] cards){
+
         Random r=new Random();
+
         //netInt(int num)：产生0-51之间的随机数
         return cards[r.nextInt(52)];
     }
