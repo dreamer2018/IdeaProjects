@@ -48,24 +48,25 @@ public class MatrixAdd {
     public void printResult(int[][] a, int[][] b, int[][] c){
         for (int i = 0; i <a.length ; i++) {
             for (int j = 0; j <a[i].length ; j++) {
-                System.out.println(a[i][j]);
+                System.out.print(a[i][j]+"\t");
             }
             if(i==1){
-                System.out.println("\t+\t");
+                System.out.print("\t+\t");
             }else {
-                System.out.println("\t\t");
+                System.out.print("\t\t");
             }
-            for (int j = 0; j <a[i].length ; j++) {
-                System.out.println(a[i][j]);
+            for (int j = 0; j <b[i].length ; j++) {
+                System.out.print(b[i][j]+"\t");
             }
             if(i==1){
-                System.out.println("\t=\t");
+                System.out.print("\t=\t");
             }else {
-                System.out.println("\t\t");
+                System.out.print("\t\t");
             }
             for (int j = 0; j <c[i].length ; j++) {
-                System.out.println(c[i][j]);
+                System.out.print(c[i][j]+"\t");
             }
+            System.out.println();
         }
     }
     public static void main(String[] args) {
@@ -97,7 +98,7 @@ public class MatrixAdd {
         m1.setMatrix(array1);
         m2.setMatrix(array2);
 
-        int[][] result=ma.addMatrix(m1.getMatrix(),m2.getMatrix());
-        ma.printResult(m1.getMatrix(),m2.getMatrix(),result);
+//        int[][] result=ma.addMatrix(m1.getMatrix(),m2.getMatrix());
+        ma.printResult(m1.getMatrix(),m2.getMatrix(),ma.addMatrix(m1.getMatrix(),m2.getMatrix()));
     }
 }
