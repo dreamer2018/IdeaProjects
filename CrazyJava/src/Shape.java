@@ -39,5 +39,7 @@ public class Circle extends Shape{
         return Math.PI*Math.pow(r,2);
     }
 
+    public String getType(){
 
+    }
 }
