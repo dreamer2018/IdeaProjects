@@ -14,8 +14,9 @@ public class DiscernVariable {
         }
     }
     public void test(){
-        InnerClass ic = new InnerClass();
-        ic.printInfo();
+        //InnerClass ic = new InnerClass();
+        //ic.printInfo();
+        new InnerClass().printInfo();
     }
 
     public static void main(String[] args) {
