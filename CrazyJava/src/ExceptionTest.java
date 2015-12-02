@@ -9,7 +9,8 @@ class Division{
             double c;
             return c=a/b;
         }catch (Exception e){
-            System.out.println(e);
+            System.out.println(e.getMessage());
+            e.printStackTrace();
             return 0;
         }
     }
@@ -23,7 +24,8 @@ public class ExceptionTest {
             c=d.division(s.nextInt(),s.nextInt());
             System.out.println(c);
         }catch (Exception e){
-            System.out.println(e+":您的输入不合法");
+            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 }
