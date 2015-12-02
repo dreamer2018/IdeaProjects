@@ -1,27 +1,29 @@
 /**
  * Created by zhoupan on 12/2/15.
  */
-//import java.util.Scanner;
-import javax.swing.*;
+import java.util.Scanner;
+
 class Division{
     public double division(int a,int b){
         try {
             double c;
             return c=a/b;
         }catch (Exception e){
-            JOptionPane.showMessageDialog(null,e);
+            System.out.println(e);
             return 0;
         }
     }
 }
 public class ExceptionTest {
     public static void main(String[] args) {
-        String str1=JOptionPane.showInputDialog("请输入：",null);
-        String str2=JOptionPane.showInputDialog("请输入：",null);
-        int a=Integer.parseInt(str1);
-        int b=Integer.parseInt(str2);
+        double c;
+        Scanner s=new Scanner(System.in);
         Division d=new Division();
-        double c=d.division(a,b);
-        JOptionPane.showMessageDialog(null,c);
+        try {
+            c=d.division(s.nextInt(),s.nextInt());
+            System.out.println(c);
+        }catch (Exception e){
+            System.out.println(e+":您的输入不合法");
+        }
     }
 }
