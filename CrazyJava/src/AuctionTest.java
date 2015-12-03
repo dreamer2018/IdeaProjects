@@ -30,7 +30,7 @@ public class AuctionTest {
     public static void main(String[] args) {
         AuctionTest at=new AuctionTest();
         try {
-            at.bid("df");
+            at.bid("12");
         }catch (AuctionException a){
             System.out.println(a.getMessage());
 
