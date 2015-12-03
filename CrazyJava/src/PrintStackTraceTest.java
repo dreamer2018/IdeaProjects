@@ -19,7 +19,6 @@ public class PrintStackTraceTest {
     public static void firstMethod(){
         secondMethod();
     }
-
     public static void secondMethod(){
         thirdMethod();
     }
