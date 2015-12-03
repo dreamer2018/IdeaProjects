@@ -11,7 +11,6 @@ class SelfException extends RuntimeException{
     }
 }
 public class PrintStackTraceTest {
-
     public static void main(String[] args) {
         firstMethod();
     }
