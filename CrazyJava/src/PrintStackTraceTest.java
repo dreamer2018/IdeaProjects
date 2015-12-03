@@ -15,7 +15,6 @@ public class PrintStackTraceTest {
     public static void main(String[] args) {
         firstMethod();
     }
-
     public static void firstMethod(){
         secondMethod();
     }
