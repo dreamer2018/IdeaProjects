@@ -10,6 +10,9 @@ class OutClass{
 }
 public class CreateInnerClassInstance {
     public static void main(String[] args) {
-        OutClass.InnerClass in = new OutClass().new InnerClass();
+        //OutClass.InnerClass in = new OutClass().new InnerClass();
+        OutClass out = new OutClass();
+        OutClass.InnerClass in;
+        in = out.new InnerClass();
     }
 }
