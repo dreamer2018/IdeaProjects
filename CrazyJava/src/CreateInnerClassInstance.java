@@ -20,6 +20,6 @@ public class CreateInnerClassInstance {
         OutClass out = new OutClass();
         OutClass.InnerClass in;
         in = out.new InnerClass("   hehe");
-        SubClass s=new SubClass(new OutClass());
+        SubClass s = new SubClass(new OutClass());
     }
 }
