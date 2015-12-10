@@ -4,7 +4,10 @@
 public class TeachableProgramer {
     public static void main(String[] args) {
         TeachableProgrammer tp= new TeachableProgrammer("Jack");
+        //tp.work();
+        //tp.getCallbackReference().work();
         tp.work();
-        tp.getCallbackReference().work();
+        TeachableProgrammer.Closure c= tp.new Closure();
+        c.work();
     }
 }
