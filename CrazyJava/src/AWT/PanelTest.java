@@ -11,7 +11,9 @@ public class PanelTest {
         Panel p=new Panel();
         p.add(new TextField(20));
         p.add(new Button("单击我"));
+        ScrollPane sp=new ScrollPane(ScrollPane.SCROLLBARS_ALWAYS);
         f.add(p);
+        f.add(sp);
         f.setBounds(500,500,250,200);
         f.setVisible(true);
     }
