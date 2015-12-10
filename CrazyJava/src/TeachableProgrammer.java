@@ -10,7 +10,7 @@ public class TeachableProgrammer extends Programmer{
     private void thach(){
         System.out.println(getName()+"教师在讲台上讲课...");
     }
-    private class Closure implements Teachable{
+    class Closure implements Teachable{
         public void work() {
             thach();
         }
