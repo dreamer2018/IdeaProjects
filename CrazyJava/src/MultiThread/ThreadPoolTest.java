@@ -13,6 +13,7 @@ class MyThread implements Runnable{
         }
     }
 }
+
 public class ThreadPoolTest {
     public static void main(String[] args) throws Exception{
         //创建一个具有6个线程的线程池
