@@ -23,8 +23,5 @@ public class ThreadPoolTest {
         pool.submit(new MyThread());
         //关闭线程
         pool.shutdown();
-        Executors.newSingleThreadExecutor();
-        Executors.newScheduledThreadPool(int corePoolSize);
-        Executors.newSingleThreadScheduledExecutor();
     }
 }
