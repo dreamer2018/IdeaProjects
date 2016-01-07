@@ -1,6 +1,8 @@
 /**
  * Created by zhoupan on 16-1-3.
  */
+
+import java.text.*;
 import java.util.Scanner;
 interface IShape {
     public abstract double getArea();
@@ -22,7 +24,8 @@ public class CreateShape implements IShape {
         CreateShape cs = new CreateShape();
         cs.side1=scanner.nextDouble();
         cs.side2=scanner.nextDouble();
-        System.out.printf("%.4f\n",cs.getArea());
-        System.out.printf("%.4f",cs.getPerimeter());
+        DecimalFormat df = new DecimalFormat("###.####");
+        System.out.println(df.format(cs.getArea()));
+        System.out.print(df.format(cs.getPerimeter()));
     }
 }
