@@ -24,8 +24,12 @@ public class creatShape implements IShape {
             Scanner scanner = new Scanner(System.in);
             creatShape m =new creatShape();
             m.side=scanner.nextDouble();
-            DecimalFormat df = new DecimalFormat("###.####");
+            DecimalFormat df2 = new DecimalFormat("###.####");
+            DecimalFormat df = new DecimalFormat("0,00,000.####");
+            System.out.println(df2.format(m.side));
             System.out.println(df.format(m.getArea()));
-            System.out.print(df.format(m.getPerimeter()));
+            System.out.println(df.format(m.getPerimeter()));
+            System.out.println(df2.format(m.getPerimeter()));
+            System.out.println(df2.format(m.getArea()));
         }
 }
