@@ -3,10 +3,8 @@ package JAVXEXAM;
 /**
  * Created by zhoupan on 16-1-8.
  */
-import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.math.BigInteger;
-import java.util.Calendar;
 import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
