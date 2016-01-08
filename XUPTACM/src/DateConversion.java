@@ -11,6 +11,6 @@ public class DateConversion {
         long time=scanner.nextLong();
         Date date = new Date(time);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
-        System.out.print(sdf.format(date));
+        System.out.print(sdf.format(1452168358));
     }
 }
