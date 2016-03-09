@@ -3,6 +3,7 @@ package Swing;
 /**
  * Created by zhoupan on 16-3-9.
  */
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -11,7 +12,7 @@ public class SwingComponent
 {
     JFrame f = new JFrame("测试");
     //定义一个按钮,并为之指定图标
-    Icon okIcon = new ImageIcon("ico/ok.png");
+    Icon okIcon = new ImageIcon("About24.gif");
     JButton ok = new JButton("确认" , okIcon);
     //定义一个单选按钮，初始处于选中状态
     JRadioButton male = new JRadioButton("男" , true);
@@ -34,19 +35,19 @@ public class SwingComponent
     JMenu file = new JMenu("文件");
     JMenu edit = new JMenu("编辑");
     //创建“新建”菜单项，并为之指定图标
-    Icon newIcon = new ImageIcon("ico/new.png");
+    Icon newIcon = new ImageIcon("Close12.gif");
     JMenuItem newItem = new JMenuItem("新建" , newIcon);
     //创建“保存”菜单项，并为之指定图标
-    Icon saveIcon = new ImageIcon("ico/save.png");
+    Icon saveIcon = new ImageIcon("Folder24.gif");
     JMenuItem saveItem = new JMenuItem("保存" , saveIcon);
     //创建“退出”菜单项，并为之指定图标
-    Icon exitIcon = new ImageIcon("ico/exit.png");
+    Icon exitIcon = new ImageIcon("Help24.gif");
     JMenuItem exitItem = new JMenuItem("退出" , exitIcon);
     JCheckBoxMenuItem autoWrap = new JCheckBoxMenuItem("自动换行");
     //创建“复制”菜单项，并为之指定图标
-    JMenuItem copyItem = new JMenuItem("复制" , new ImageIcon("ico/copy.png"));
+    JMenuItem copyItem = new JMenuItem("复制" , new ImageIcon("Help24.gif"));
     //创建“粘贴”菜单项，并为之指定图标
-    JMenuItem pasteItem = new JMenuItem("粘贴" , new ImageIcon("ico/paste.png"));
+    JMenuItem pasteItem = new JMenuItem("粘贴" , new ImageIcon("Help24.gif"));
     JMenu format = new JMenu("格式");
     JMenuItem commentItem = new JMenuItem("注释");
     JMenuItem cancelItem = new JMenuItem("取消注释");
