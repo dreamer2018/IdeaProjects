@@ -57,7 +57,8 @@ public class CardLayoutTest {
         p.add(next);
         p.add(first);
         p.add(last);
-        p.add(third);
+       // p.add(third);
+        f.add(p1);
         f.add(p,BorderLayout.SOUTH);
         f.pack();
         f.setVisible(true);
