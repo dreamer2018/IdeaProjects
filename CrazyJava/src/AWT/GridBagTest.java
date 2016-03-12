@@ -16,7 +16,7 @@ public class GridBagTest {
             bs[i]= new Button("按钮"+i);
         }
         gbc.fill = GridBagConstraints.BOTH;
-        gbc.weightx=2;
+        gbc.weightx=1;
         addButton(bs[0]);
         addButton(bs[1]);
         addButton(bs[2]);
@@ -32,9 +32,9 @@ public class GridBagTest {
         addButton(bs[6]);
         gbc.gridwidth=1;
         gbc.gridheight=2;
-        gbc.weighty=1;
-        addButton(bs[7]);
         gbc.weighty=0;
+        addButton(bs[7]);
+        gbc.weighty=1;
         gbc.gridwidth = GridBagConstraints.REMAINDER;
         gbc.gridheight=1;
         addButton(bs[8]);
@@ -49,5 +49,4 @@ public class GridBagTest {
     public static void main(String[] args) {
         new GridBagTest().init();
     }
-
 }
