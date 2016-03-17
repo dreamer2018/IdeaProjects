@@ -7,7 +7,7 @@ import java.awt.event.*;
 /**
  * Created by zhoupan on 16-3-16.
  */
-public class Taskbar implements MouseListener {
+public class Taskbar{
     //基础窗口
     JFrame jf = new JFrame("影院售票管理系统");
     JPanel jp = new JPanel();
@@ -48,7 +48,11 @@ public class Taskbar implements MouseListener {
     //设置GridBagLayout布局管理器
     GridBagLayout gb = new GridBagLayout();
     GridBagConstraints gbc = new GridBagConstraints();
+
     ///////////////////////
+
+
+
     JLabel lab ;
     JLabel lab3=new JLabel();
     public Taskbar(){
@@ -61,34 +65,15 @@ public class Taskbar implements MouseListener {
         lab3.setHorizontalAlignment(JLabel.RIGHT);// 设置文字显示在最右边
         jp.add(lab1);
         jp.add(lab3);
-        tab.pane.addTab("string",lab);
-        tab.pane.setTabComponentAt(tab.pane.indexOfComponent(lab),jp);//实现这个功能的就这一条最重要的语句
-        lab3.addMouseListener(this);
+        new tab().pane.addTab("string",lab);
+        new tab().pane.setTabComponentAt(tab.pane.indexOfComponent(lab),jp);//实现这个功能的就这一条最重要的语句
+        lab3.addMouseListener(new mouseListener());
     }
-    @Override
-    public void mouseClicked(MouseEvent arg0) {
-        // TODO Auto-generated method stub
+
+    //////////////////////
+    public void removeLable(){
         tab.pane.remove(tab.pane.indexOfTabComponent(jp));
     }
-    @Override
-    public void mouseEntered(MouseEvent e) {
-        // TODO Auto-generated method stub
-        lab3.setText("x ");
-    }
-    @Override
-    public void mouseExited(MouseEvent arg0) {
-        // TODO Auto-generated method stub
-        lab3.setText("");
-    }
-    @Override
-    public void mousePressed(MouseEvent arg0) {
-        // TODO Auto-generated method stub
-    }
-    @Override
-    public void mouseReleased(MouseEvent arg0) {
-        // TODO Auto-generated method stub
-    }
-    //////////////////////
     public void init(){
        //设置菜单栏监听
         ActionListener menubarListener = new ActionListener() {
@@ -163,14 +148,19 @@ public class Taskbar implements MouseListener {
         jf.pack();
         jf.setVisible(true);
     }
-    public void info(){
 
-    }
     public static void main(String[] args) {
         new Taskbar().init();
     }
 }
-
+class mouseListener extends MouseAdapter {
+    @Override
+    public void mouseClicked(MouseEvent arg0) {
+        // TODO Auto-generated method stub
+        //tab.pane.remove(tab.pane.indexOfTabComponent(jp));
+        new Taskbar().removeLable();
+    }
+}
 class tab extends JFrame implements ActionListener {
     JMenuItem mi;
     static JTabbedPane pane;
