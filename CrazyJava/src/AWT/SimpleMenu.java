@@ -45,9 +45,11 @@ public class SimpleMenu {
         edit.addSeparator();
         edit.add(copyItem);
         edit.add(pastItem);
-        edit.addSeparator();
+        //edit.addSeparator();
+
         format.add(copyItem);
         format.add(cancelItem);
+        edit.add(new MenuItem("-"));
         edit.add(format);
         mb.add(file);
         mb.add(edit);
