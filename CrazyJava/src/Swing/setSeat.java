@@ -6,13 +6,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.Locale;
 
 /**
  * Created by zhoupan on 16-3-18.
  */
 public class setSeat {
-    JFrame jf = new JFrame("座位设置");
+        JFrame jf = new JFrame("座位设置");
         JLabel hail = new JLabel();
         JLabel row_X = new JLabel();
         JLabel row_Y = new JLabel();
@@ -24,39 +23,51 @@ public class setSeat {
         JComboBox<String> row_Y_select = new JComboBox<>(row_Y_select_string);
         JButton confirm = new JButton("确认");
         JButton exit = new JButton("退出");
+        JPanel jp = new JPanel();
     public void init(){
-        jf.setSize(251,198);
-        int windowWidth = jf.getWidth();
-        int winowHeight = jf.getHeight();
-        double screenHeighth=getDimension().getHeight();
-        double screenWidth=getDimension().getWidth();
-        System.out.println(screenHeighth+""+screenWidth);
-        jf.setLocation(((int)screenWidth-windowWidth)/2,((int)screenHeighth-winowHeight)/2);
+        jf.setSize(300,200);
         confirm.addActionListener(new buttonListener());
+        confirm.setSize(60,30);
         exit.addActionListener(new buttonListener());
-        jf.setLayout(new GridLayout(4,2));
-        hail.setText("  请选择影厅：");
-        hail.setFont(new Font("楷体",Font.ITALIC,16));
-        row_X.setText("  请选择行：");
-        row_X.setFont(new Font("楷体",Font.ITALIC,16));
-        row_Y.setText("  请选择列：");
-        row_Y.setFont(new Font("楷体",Font.ITALIC,16));
-        jf.addWindowListener(new windowListener());
-        jf.add(hail);
-        jf.add(hail_select);
-        jf.add(row_X);
-        jf.add(row_X_select);
-        jf.add(row_Y);
-        jf.add(row_Y_select);
-        jf.add(confirm);
-        jf.add(exit);
+        exit.setSize(60,30);
+
+        jf.setLayout(new GridLayout());
+        jp.setLayout(null);
+        hail.setText("请选择影厅：");
+        hail.setSize(100,50);
+
+        row_X.setText("    请选择行：");
+        row_X.setSize(100,50);
+        row_Y.setText("    请选择列：");
+        row_Y.setSize(100,50);
+
+        hail_select.setSize(80,20);
+        row_X_select.setSize(80,20);
+        row_Y_select.setSize(80,20);
+
+        confirm.setLocation(40,120);
+        exit.setLocation(180,120);
+        hail.setLocation(40,10);
+        row_X.setLocation(40,40);
+        row_Y.setLocation(40,70);
+        hail_select.setLocation(140,23);
+        row_X_select.setLocation(140,53);
+        row_Y_select.setLocation(140,83);
+
+        jp.add(hail);
+        jp.add(hail_select);
+        jp.add(row_X);
+        jp.add(row_X_select);
+        jp.add(row_Y);
+        jp.add(row_Y_select);
+        jp.add(confirm);
+        jp.add(exit);
+        jf.addWindowListener( new windowListener());
+        jf.add(jp);
+        jf.setLocationRelativeTo(null);
         jf.setVisible(true);
         jf.setResizable(false);
-    }
-    public Dimension  getDimension(){
-        Toolkit kit = Toolkit.getDefaultToolkit();
-        Dimension screenSize = kit.getScreenSize();
-        return screenSize;
+
     }
     class buttonListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
