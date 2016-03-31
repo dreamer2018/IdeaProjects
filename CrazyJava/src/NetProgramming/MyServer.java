@@ -62,7 +62,7 @@ class ServerThread implements Runnable{
             return br.readLine();
         }//如果捕获到异常，则表明该socket对应的客户端已经关闭
         catch (IOException e){
-            //删除该Socket
+            //删除该Socketgit
             MyServer.socketList.remove(s);
         }
         return null;
