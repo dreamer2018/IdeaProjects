@@ -20,5 +20,6 @@
     </tr>
     <%}%>
 </table>
+<%@ include file="include.jsp"%>
 </body>
 </html>
