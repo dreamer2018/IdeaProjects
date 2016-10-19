@@ -1,0 +1,36 @@
+package org.xiyoulinux;
+
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+/**
+ * Created by zhoupan on 10/19/16.
+ */
+
+
+@WebServlet(name = "LoginServlet", urlPatterns = "/login/")
+public class LoginServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        if (username.length() < 1 || password.length() < 1) {
+            request.setAttribute("reason", "用户名或密码不能为空！");
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
+        } else if (username.equals("zhoupan") && password.equals("zhoupan")) {
+            request.getSession().setAttribute("username", username);
+            response.sendRedirect("/");
+        } else {
+            request.setAttribute("reason", "用户名或密码不能为空！");
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
+        }
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doPost(request, response);
+    }
+}
