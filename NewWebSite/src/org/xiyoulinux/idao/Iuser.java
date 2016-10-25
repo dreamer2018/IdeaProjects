@@ -1,4 +1,4 @@
-package org.xiyoulinux.IDAO;
+package org.xiyoulinux.idao;
 
 import org.xiyoulinux.model.User;
 /**
@@ -9,5 +9,5 @@ public interface Iuser {
     public boolean delete(int user_id);
     public boolean update(User user);
     public User findUserByName(String user_name);
-    public User findUserByID(String user_id);
+    public User findUserByID(int user_id);
 }
