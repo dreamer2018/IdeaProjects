@@ -29,7 +29,7 @@
                 <button type="submit">Sign in</button>
             </form>
         </div>
-        <div class="page-container" style="color: crimson">
+        <div class="page-container" style="color: #dc143c">
         <%
             if(request.getAttribute("reason")!= null){
                 out.println(request.getAttribute("reason"));
