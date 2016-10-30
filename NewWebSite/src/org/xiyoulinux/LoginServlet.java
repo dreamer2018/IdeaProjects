@@ -18,15 +18,20 @@ public class LoginServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        request.getSession().setAttribute("login",null);
         if (username.length() < 1 || password.length() < 1) {
             request.setAttribute("reason", "用户名或密码不能为空！");
-            request.getRequestDispatcher("/login.jsp").forward(request, response);
-        } else if (username.equals("zhoupan") && password.equals("zhoupan")) {
-            request.getSession().setAttribute("username", username);
-            response.sendRedirect("/");
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
         } else {
-            request.setAttribute("reason", "用户名或密码不能为空！");
-            request.getRequestDispatcher("/login.jsp").forward(request, response);
+            Login login = new Login();
+            if (login.LoginCheck(username, password)) {
+                request.getSession().setAttribute("username", username);
+                request.getSession().setAttribute("login","ok");
+                response.sendRedirect("/admin/");
+            } else {
+                request.setAttribute("reason", "用户名或密码不正确！");
+                request.getRequestDispatcher("/index.jsp").forward(request, response);
+            }
         }
     }
 
