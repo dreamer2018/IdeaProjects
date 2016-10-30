@@ -10,7 +10,7 @@ import java.io.IOException;
  * Servlet Filter implementation class CharsetAllEncodingFilter
  */
 
-@WebFilter(filterName = "CharsetAllEncodingFilter", urlPatterns = "/admin/", initParams = {@WebInitParam(name = "encoding", value = "UTF-8")})
+//@WebFilter(filterName = "CharsetAllEncodingFilter", urlPatterns = "/admin/", initParams = {@WebInitParam(name = "encoding", value = "UTF-8")})
 public class CharsetAllEncodingFilter implements Filter {
 
     /**
@@ -32,6 +32,7 @@ public class CharsetAllEncodingFilter implements Filter {
         if (httpRequest.getMethod().equalsIgnoreCase("POST")) {
             request.setCharacterEncoding(encoding);
         }
+        System.out.println("test filter");
         chain.doFilter(request, response);
     }
 }
