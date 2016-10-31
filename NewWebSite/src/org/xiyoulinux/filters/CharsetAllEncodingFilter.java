@@ -10,7 +10,7 @@ import java.io.IOException;
  * Servlet Filter implementation class CharsetAllEncodingFilter
  */
 
-//@WebFilter(filterName = "CharsetAllEncodingFilter", urlPatterns = "/admin/", initParams = {@WebInitParam(name = "encoding", value = "UTF-8")})
+@WebFilter(filterName = "CharsetAllEncodingFilter", urlPatterns = "/*", initParams = {@WebInitParam(name = "encoding", value = "UTF-8")})
 public class CharsetAllEncodingFilter implements Filter {
 
     /**
