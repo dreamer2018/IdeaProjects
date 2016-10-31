@@ -3,9 +3,9 @@ package org.xiyoulinux.model;
 /**
  * Created by zhoupan on 10/31/16.
  */
-public class community {
+public class Community {
     private int id;
-    private String title;
+    private String name;
     private String url;
 
     public int getId() {
@@ -16,12 +16,12 @@ public class community {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getUrl() {
