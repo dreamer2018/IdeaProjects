@@ -98,6 +98,7 @@ public class UserDAO implements Iuser {
         PreparedStatement ps = null;
         try {
             String sql = "select id,name,passwd from user where name = ?";
+            System.out.println(sql+user_name);
             ps = conn.prepareStatement(sql);
             ps.setString(1, user_name);
             rs = ps.executeQuery();
