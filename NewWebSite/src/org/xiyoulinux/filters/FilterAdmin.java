@@ -18,9 +18,7 @@ public class FilterAdmin implements Filter {
         HttpServletRequest request = (HttpServletRequest)req;
         HttpServletResponse response = (HttpServletResponse)resp;
         String flag = (String) request.getSession().getAttribute("login");
-        System.out.println(flag);
         if(flag != null && flag.equals("ok")) {
-            System.out.println("execute DoFilter");
             chain.doFilter(request,response);
         }else{
             request.setAttribute("message","您无权访问该目录");

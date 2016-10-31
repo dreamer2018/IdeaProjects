@@ -7,7 +7,7 @@ import org.xiyoulinux.model.User;
 public class UserTest {
     public static void main(String[] args) {
         UserDAO userdao = new UserDAO();
-        User u = userdao.findUserByName("zhoupan");
+        User u = userdao.getUserByName("zhoupan");
         System.out.println(u.getName());
         System.out.println(u.getPasswd());
     }

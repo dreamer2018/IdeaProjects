@@ -32,7 +32,6 @@ public class CharsetAllEncodingFilter implements Filter {
         if (httpRequest.getMethod().equalsIgnoreCase("POST")) {
             request.setCharacterEncoding(encoding);
         }
-        System.out.println("test filter");
         chain.doFilter(request, response);
     }
 }
