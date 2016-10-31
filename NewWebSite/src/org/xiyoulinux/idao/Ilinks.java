@@ -5,14 +5,14 @@ import org.xiyoulinux.model.Links;
 /**
  * Created by zhoupan on 10/31/16.
  */
-public interface ILinks {
-    public boolean inster(Links links);
+public interface Ilinks {
+    public boolean insert(Links links);
 
     public boolean delete(int link_id);
 
     public boolean update(Links links);
 
-    public Links findAboutByID(int link_id);
+    public Links getLinksByID(int link_id);
 
-    public Links findAboutByName(String name);
+    public Links getLinksByName(String name);
 }
