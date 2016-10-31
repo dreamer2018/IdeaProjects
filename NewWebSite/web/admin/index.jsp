@@ -15,7 +15,7 @@
 <div class="container">
     <div class="col-md-6">
         <a href="activity.html"><button class="btn btn-success">活动编辑</button></a>
-        <button class="btn btn-success">简介编辑</button>
+        <a href="introduction.html"><button class="btn btn-success">简介编辑</button></a>
     </div>
 </div>
 </body>
