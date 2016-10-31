@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
         request.getSession().setAttribute("login",null);
         if (username.length() < 1 || password.length() < 1) {
             request.setAttribute("reason", "用户名或密码不能为空！");
-            request.getRequestDispatcher("/index.jsp").forward(request, response);
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
         } else {
             Login login = new Login();
             if (login.LoginCheck(username, password)) {
@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("/admin/");
             } else {
                 request.setAttribute("reason", "用户名或密码不正确！");
-                request.getRequestDispatcher("/index.jsp").forward(request, response);
+                request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
         }
     }

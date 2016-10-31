@@ -15,9 +15,8 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <!-- CSS -->
-        <link rel="stylesheet" href="/css/reset.css">
         <link rel="stylesheet" href="/css/supersized.css">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/login.css">
     </head>
     <body>
 

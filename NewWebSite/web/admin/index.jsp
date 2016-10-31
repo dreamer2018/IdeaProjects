@@ -9,10 +9,14 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
-ewfgrbvgt
-ergvbrtbn
-erbhngh
+<div class="container">
+    <div class="col-md-6">
+        <a href="activity.html"><button class="btn btn-success">活动编辑</button></a>
+        <button class="btn btn-success">简介编辑</button>
+    </div>
+</div>
 </body>
 </html>
