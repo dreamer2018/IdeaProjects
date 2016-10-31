@@ -88,7 +88,7 @@ public class UserDAO implements Iuser {
     }
 
     @Override
-    public User findUserByName(String user_name) {
+    public User getUserByName(String user_name) {
         User rtu = null;
         if (user_name == null || user_name.equals("")) {
             return rtu;
@@ -116,7 +116,7 @@ public class UserDAO implements Iuser {
     }
 
     @Override
-    public User findUserByID(int user_id) {
+    public User getUserByID(int user_id) {
         User rtu = null;
         if (user_id <= 0) {
             return rtu;
