@@ -13,7 +13,7 @@ public class Login {
             return false;
         }
         UserDAO userDAO = new UserDAO();
-        User user = userDAO.findUserByName(name);
+        User user = userDAO.getUserByName(name);
         if (user == null) {
             return false;
         } else if (user.getPasswd().equals(passwd)) {
