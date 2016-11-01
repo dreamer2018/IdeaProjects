@@ -1,4 +1,6 @@
-package org.xiyoulinux;
+package org.xiyoulinux.servlet;
+
+import org.xiyoulinux.servlet.Login;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;

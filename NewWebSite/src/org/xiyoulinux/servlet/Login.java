@@ -1,4 +1,4 @@
-package org.xiyoulinux;
+package org.xiyoulinux.servlet;
 
 import org.xiyoulinux.dao.UserDAO;
 import org.xiyoulinux.model.User;
