@@ -21,6 +21,7 @@ public class AdminFilter implements Filter {
         if(flag != null && flag.equals("ok")) {
             chain.doFilter(request,response);
         }else{
+            System.out.println("您无权访问该目录");
             request.setAttribute("message","您无权访问该目录");
             RequestDispatcher rd = request.getRequestDispatcher("/404.html");
             rd.forward(request,response);

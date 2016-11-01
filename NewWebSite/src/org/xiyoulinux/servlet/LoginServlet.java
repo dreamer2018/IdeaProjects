@@ -1,6 +1,6 @@
 package org.xiyoulinux.servlet;
 
-import org.xiyoulinux.servlet.Login;
+import org.xiyoulinux.dao.UserDAO;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -20,15 +20,15 @@ public class LoginServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        request.getSession().setAttribute("login",null);
+        request.getSession().setAttribute("login", null);
         if (username.length() < 1 || password.length() < 1) {
             request.setAttribute("reason", "用户名或密码不能为空！");
             request.getRequestDispatcher("/login.jsp").forward(request, response);
         } else {
-            Login login = new Login();
-            if (login.LoginCheck(username, password)) {
+            UserDAO login = new UserDAO();
+            if (login.check(username, password)) {
                 request.getSession().setAttribute("username", username);
-                request.getSession().setAttribute("login","ok");
+                request.getSession().setAttribute("login", "ok");
                 response.sendRedirect("/admin/");
             } else {
                 request.setAttribute("reason", "用户名或密码不正确！");

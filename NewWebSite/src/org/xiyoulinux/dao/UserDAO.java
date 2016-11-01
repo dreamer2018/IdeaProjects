@@ -34,7 +34,9 @@ public class UserDAO implements Iuser {
             ps.setString(2, user.getPasswd());
             ps.executeUpdate();
             rtu = true;
-        } catch (Exception e) {
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }catch(Exception e) {
             e.printStackTrace();
         } finally {
             ConnectionManager.close(null, ps, conn);
@@ -98,7 +100,7 @@ public class UserDAO implements Iuser {
         PreparedStatement ps = null;
         try {
             String sql = "select id,name,passwd from user where name = ?";
-            System.out.println(sql+user_name);
+            System.out.println(sql + user_name);
             ps = conn.prepareStatement(sql);
             ps.setString(1, user_name);
             rs = ps.executeQuery();
@@ -140,5 +142,15 @@ public class UserDAO implements Iuser {
         } finally {
             return rtu;
         }
+    }
+
+    @Override
+    public boolean check(String name, String passwd) {
+        if (name == null || name.equals("") || passwd == null || passwd.equals("")) {
+            return false;
+        }
+        UserDAO userDAO = new UserDAO();
+        User user = userDAO.getUserByName(name);
+        return null != user && user.getPasswd().equals(passwd);
     }
 }

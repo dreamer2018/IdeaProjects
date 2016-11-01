@@ -15,4 +15,6 @@ public interface Iuser {
     public User getUserByName(String user_name);
 
     public User getUserByID(int user_id);
+
+    public boolean check(String name,String passwd);
 }
