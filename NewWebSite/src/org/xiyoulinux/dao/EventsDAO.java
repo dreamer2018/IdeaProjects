@@ -82,6 +82,7 @@ public class EventsDAO implements Ievents {
         Connection conn = ConnectionManager.getInstance().getConnection();
         PreparedStatement ps = null;
         try {
+
             String sql = "update events set title = ? and content = ? and poster_url= ? and date= ? and time = ? and address = ? and tips = ? where id = ? ";
             ps = conn.prepareStatement(sql);
             ps.setString(1, events.getTitle());
@@ -93,6 +94,7 @@ public class EventsDAO implements Ievents {
             ps.setString(7, events.getTips());
             ps.setInt(8, events.getId());
             rtu = true;
+
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (Exception e) {
